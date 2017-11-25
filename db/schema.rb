@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171123085259) do
+ActiveRecord::Schema.define(version: 20171123100403) do
+
+  create_table "benefits", force: :cascade do |t|
+    t.integer  "type_id"
+    t.integer  "shop_id"
+    t.text     "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genre_products", force: :cascade do |t|
+    t.integer  "genre_id",   null: false
+    t.integer  "product_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.string   "title"
@@ -19,6 +40,12 @@ ActiveRecord::Schema.define(version: 20171123085259) do
     t.datetime "release_date"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "shops", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

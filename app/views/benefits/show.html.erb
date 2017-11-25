@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @benefit.type_id %>
+</p>
+
+<p>
+  <strong>Shop:</strong>
+  <%= @benefit.shop_id %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @benefit.image_url %>
+</p>
+
+<%= link_to 'Edit', edit_benefit_path(@benefit) %> |
+<%= link_to 'Back', benefits_path %>

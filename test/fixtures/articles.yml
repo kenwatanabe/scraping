@@ -3,7 +3,9 @@
 one:
   title: MyText
   content: MyText
+  view_count: 1
 
 two:
   title: MyText
   content: MyText
+  view_count: 1

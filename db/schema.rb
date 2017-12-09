@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20171209114943) do
   create_table "articles", force: :cascade do |t|
     t.text     "title"
     t.text     "content"
+    t.integer  "view_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

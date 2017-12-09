@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171125083547) do
+ActiveRecord::Schema.define(version: 20171209114943) do
 
   create_table "amazon_api_data", force: :cascade do |t|
     t.string   "id_type"
@@ -20,6 +20,21 @@ ActiveRecord::Schema.define(version: 20171125083547) do
     t.string   "product_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "article_products", force: :cascade do |t|
+    t.integer  "article_id"
+    t.integer  "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "articles", force: :cascade do |t|
+    t.text     "title"
+    t.text     "content"
+    t.integer  "view_count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "benefit_types", force: :cascade do |t|

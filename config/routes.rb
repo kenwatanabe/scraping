@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :amazon_api_data
+  resources :benefit_types
   resources :shops
   resources :genres
   resources :benefits

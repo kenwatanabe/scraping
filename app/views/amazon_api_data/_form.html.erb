@@ -1,0 +1,29 @@
+<%= form_for(@amazon_api_datum) do |f| %>
+  <% if @amazon_api_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@amazon_api_datum.errors.count, "error") %> prohibited this amazon_api_datum from being saved:</h2>
+
+      <ul>
+      <% @amazon_api_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_type %><br>
+    <%= f.text_field :id_type %>
+  </div>
+  <div class="field">
+    <%= f.label :item_id %><br>
+    <%= f.text_field :item_id %>
+  </div>
+  <div class="field">
+    <%= f.label :main_image_url %><br>
+    <%= f.text_area :main_image_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

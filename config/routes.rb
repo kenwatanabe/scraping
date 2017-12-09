@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :amazon_api_data
+  resources :benefit_types
+  resources :shops
+  resources :genres
+  resources :benefits
+  resources :products
+  
+  root 'products#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

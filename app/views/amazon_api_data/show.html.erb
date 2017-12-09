@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id type:</strong>
+  <%= @amazon_api_datum.id_type %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @amazon_api_datum.item_id %>
+</p>
+
+<p>
+  <strong>Main image url:</strong>
+  <%= @amazon_api_datum.main_image_url %>
+</p>
+
+<%= link_to 'Edit', edit_amazon_api_datum_path(@amazon_api_datum) %> |
+<%= link_to 'Back', amazon_api_data_path %>

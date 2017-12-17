@@ -49,3 +49,8 @@ group :development do
   gem 'spring'
 end
 
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+end

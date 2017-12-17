@@ -69,6 +69,6 @@ class AmazonApiDataController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def amazon_api_datum_params
-      params.require(:amazon_api_datum).permit(:id_type, :item_id, :main_image_url)
+      params.require(:amazon_api_datum).permit(:id_type, :item_id, :main_image_url, :product_id)
     end
 end

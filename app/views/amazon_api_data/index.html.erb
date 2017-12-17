@@ -8,6 +8,7 @@
       <th>Id type</th>
       <th>Item</th>
       <th>Main image url</th>
+      <th>Product Id</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= amazon_api_datum.id_type %></td>
         <td><%= amazon_api_datum.item_id %></td>
         <td><%= amazon_api_datum.main_image_url %></td>
+        <td><%= amazon_api_datum.product_id %></td>
         <td><%= link_to 'Show', amazon_api_datum %></td>
         <td><%= link_to 'Edit', edit_amazon_api_datum_path(amazon_api_datum) %></td>
         <td><%= link_to 'Destroy', amazon_api_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  products:
+    index:
+      new_image: "Add new image"
